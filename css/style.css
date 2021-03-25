@@ -64,7 +64,8 @@ header {
   border-radius: 50%;
 }
 
-.services {
+.services,
+.contact-container {
   background-color: #f1f3fa;
   padding: 4rem 1rem;
 }
@@ -133,23 +134,61 @@ header {
 
 .section-header {
   text-align: center;
-  padding: 4rem 0 6rem;
+  padding: 6rem 0 4rem;
 }
 
 .portfolio-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-/* .portfolio-box:hover {
-  cursor: pointer;
-} */
 
 .portfolio-box {
   width: 250px;
   height: 250px;
   background-color: #f1f3fa;
+  transition: 0.2s ease-in-out;
 }
 
+.portfolio-box:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.portfolio-object {
+  max-width: 250px;
+  margin: 1rem 0;
+}
+
+.title-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+.form-control {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  color: #292b2c;
+  border-radius: 2px;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  line-height: 1.5;
+  background-clip: padding-box;
+  display: block;
+}
+.submit-btn-wrapper {
+  margin-top: 4rem;
+}
 @media (max-width: 768px) {
   .topnav {
     display: none;
@@ -164,5 +203,34 @@ header {
     position: absolute;
     top: 100%;
     right: 10px;
+  }
+  .portfolio-wrapper {
+    text-align: center;
+  }
+
+  .form-group {
+    display: flex;
+  }
+  .submit-btn-wrapper {
+    text-align: center;
+  }
+  .media-object {
+    text-align: center;
+    flex-direction: column;
+  }
+  .icon-right,
+  .icon-left {
+    order: 1;
+  }
+  .blurb-wrapper-left,
+  .blurb-wrapper-right {
+    order: 2;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .portfolio-wrapper {
+    justify-content: center;
   }
 }
